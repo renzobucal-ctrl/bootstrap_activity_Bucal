@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap5 Bucal | Responsive Dental Care</title>
+	<link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+	:root {
+		--steel-dark: #0d6efd;
+		--steel: #0b5ed7;
+		--steel-light: #e9ecef;
+		--steel-pale: #f8f9fa;
+		--sky: #b9d7ff;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		background-color: var(--steel-pale);
+		color: var(--steel-dark);
+	}
+	.navbar { background-color: #fff; }
+	.navbar-brand,
+	.nav-link { color: #212529 !important; }
+	.nav-link:hover,
+	.nav-link.active {
+		color: var(--steel-dark) !important;
+	}
+	.hero,
+	.footer {
+		background-color: var(--steel-dark);
+	}
+	.hero {
+		background-image: linear-gradient(135deg, #0d6efd, #0a58ca);
+		min-height: 560px;
+	}
+	.badge-steel {
+		background-color: var(--sky);
+		color: var(--steel-dark);
+	}
+	.text-steel {
+		color: var(--steel) !important;
+	}
+	.btn-steel {
+		background-color: var(--steel);
+		border-color: var(--steel);
+		color: white;
+	}
+	.btn-steel:hover {
+		background-color: var(--steel-dark);
+		border-color: var(--steel-dark);
+		color: white;
+	}
+	.btn-outline-sky {
+		border-color: var(--sky);
+		color: white;
+	}
+	.btn-outline-sky:hover {
+		background-color: var(--sky);
+		color: var(--steel-dark);
+	}
+	.section-light {
+		background-color: var(--steel-light);
+	}
+	.section-white { background-color: #fff; }
+	.feature-card,
+	.price-card,
+	.testimonial-card {
+		border: 0;
+		box-shadow: 0 0.5rem 1.5rem rgba(22, 50, 79, 0.1);
+	}
+	.feature-icon {
+		background-color: var(--steel-light);
+		color: var(--steel);
+		font-size: 2rem;
+		width: 64px;
+		height: 64px;
+	}
+	.price-card.featured {
+		border: 2px solid var(--sky);
+		transform: translateY(-8px);
+	}
+	.price-card ul {
+		list-style: none;
+		padding-left: 0;
+	}
+	.price-card li {
+		margin-bottom: 0.75rem;
+	}
+	.price-card li::before {
+		content: "✓";
+		color: var(--steel);
+		font-weight: bold;
+		margin-right: 0.5rem;
+	}
+	section {
+		scroll-margin-top: 70px;
+	}
+	[data-theme="dark"] body { background-color: #17202a; color: #f8f9fa; }
+	[data-theme="dark"] .navbar { background-color: #212529; }
+	[data-theme="dark"] .navbar-brand,
+	[data-theme="dark"] .nav-link { color: #f8f9fa !important; }
+	[data-theme="dark"] .section-white,
+	[data-theme="dark"] .card,
+	[data-theme="dark"] form { background-color: #212529 !important; color: #f8f9fa; }
+	[data-theme="dark"] .section-light { background-color: #2b3035; }
+	[data-theme="dark"] .text-secondary { color: #adb5bd !important; }
+</style>
+<body>
+	<nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+		<div class="container">
+			<a class="navbar-brand fw-bold fs-4 text-primary" href="#home">▣ Bootstrap5</a>
+			<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mainNavigation">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+					<li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+					<li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					<li class="nav-item ms-lg-2"><button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false">◐</button></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header id="home" class="hero text-white py-5">
+		<div class="container py-5">
+			<div class="row align-items-center justify-content-center g-5">
+				<div class="col-lg-7 text-center">
+					<span class="badge bg-light text-primary rounded-pill px-3 py-2 mb-3">Version 5.3.8</span>
+					<h1 class="display-3 fw-bold">Build fast, responsive <br>sites with Bootstrap</h1>
+					<p class="lead text-white-50 my-4">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+					<a class="btn btn-light btn-lg me-2" href="#features">Get Started</a>
+					<a class="btn btn-outline-sky btn-lg" href="#pricing">View Plans</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="features" class="py-5">
+		<div class="container py-4">
+			<div class="text-center mb-5">
+				<p class="text-uppercase fw-bold text-steel mb-2">Powerful features</p>
+				<h2 class="display-6 fw-bold">Everything your smile needs</h2>
+			</div>
+			<div class="row g-4">
+				<div class="col-md-4">
+					<div class="card feature-card h-100 p-4">
+						<div class="feature-icon rounded-circle d-flex align-items-center justify-content-center mb-4" aria-hidden="true">✦</div>
+						<h3 class="h4">Preventive care</h3>
+						<p class="text-secondary mb-0">Regular cleanings and gentle checkups that keep small concerns from becoming big ones.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card feature-card h-100 p-4">
+						<div class="feature-icon rounded-circle d-flex align-items-center justify-content-center mb-4" aria-hidden="true">♡</div>
+						<h3 class="h4">Comfort-first visits</h3>
+						<p class="text-secondary mb-0">A calm environment, clear explanations, and a caring team at every step.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card feature-card h-100 p-4">
+						<div class="feature-icon rounded-circle d-flex align-items-center justify-content-center mb-4" aria-hidden="true">✓</div>
+						<h3 class="h4">Complete solutions</h3>
+						<p class="text-secondary mb-0">Personalized treatment plans for brighter, stronger, and more confident smiles.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="pricing" class="section-light py-5">
+		<div class="container py-4">
+			<div class="text-center mb-5">
+				<p class="text-uppercase fw-bold text-steel mb-2">Simple plans</p>
+				<h2 class="display-6 fw-bold">Choose your level of care</h2>
+			</div>
+			<div class="row g-4 align-items-center">
+				<div class="col-md-4">
+					<div class="card price-card h-100 p-4">
+						<h3 class="h4">Starter</h3><p class="text-secondary">For everyday prevention</p><p class="display-6 fw-bold text-steel">$49<small class="fs-6 text-secondary"> / visit</small></p>
+						<ul><li>Dental consultation</li><li>Basic cleaning</li><li>Care recommendations</li></ul>
+						<a class="btn btn-outline-primary mt-auto" href="#contact">Choose Starter</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card price-card featured h-100 p-4">
+						<span class="badge badge-steel align-self-start mb-2">Most popular</span><h3 class="h4">Pro</h3><p class="text-secondary">For complete smile care</p><p class="display-6 fw-bold text-steel">$99<small class="fs-6 text-secondary"> / visit</small></p>
+						<ul><li>Everything in Starter</li><li>Whitening consultation</li><li>Priority scheduling</li></ul>
+						<a class="btn btn-steel mt-auto" href="#contact">Choose Pro</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card price-card h-100 p-4">
+						<h3 class="h4">Enterprise</h3><p class="text-secondary">For ongoing family care</p><p class="display-6 fw-bold text-steel">$179<small class="fs-6 text-secondary"> / month</small></p>
+						<ul><li>Family appointments</li><li>Complete examinations</li><li>Flexible payment options</li></ul>
+						<a class="btn btn-outline-primary mt-auto" href="#contact">Choose Enterprise</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonials" class="section-white py-5">
+		<div class="container py-4">
+			<div class="text-center mb-5"><p class="text-uppercase fw-bold text-steel mb-2">Patient stories</p><h2 class="display-6 fw-bold">Care people remember</h2></div>
+			<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators"><button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Story one"></button><button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Story two"></button><button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Story three"></button></div>
+				<div class="carousel-inner">
+					<div class="carousel-item active"><div class="card testimonial-card mx-auto p-5 text-center" style="max-width: 760px;"><p class="fs-4">“The whole visit felt calm and personal. I finally look forward to checkups.”</p><h3 class="h6 mb-1">Maya Santos</h3><small class="text-secondary">Preventive care patient</small></div></div>
+					<div class="carousel-item"><div class="card testimonial-card mx-auto p-5 text-center" style="max-width: 760px;"><p class="fs-4">“They explained every option clearly and helped me feel confident about my treatment.”</p><h3 class="h6 mb-1">Daniel Cruz</h3><small class="text-secondary">Smile care patient</small></div></div>
+					<div class="carousel-item"><div class="card testimonial-card mx-auto p-5 text-center" style="max-width: 760px;"><p class="fs-4">“The team made our family appointments easy, kind, and completely stress-free.”</p><h3 class="h6 mb-1">Leah Garcia</h3><small class="text-secondary">Family care patient</small></div></div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous testimonial"><span class="carousel-control-prev-icon bg-primary rounded-circle p-3"></span></button><button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next testimonial"><span class="carousel-control-next-icon bg-primary rounded-circle p-3"></span></button>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="section-light py-5">
+		<div class="container py-4">
+			<div class="row g-5">
+				<div class="col-lg-5"><p class="text-uppercase fw-bold text-steel mb-2">Let us help</p><h2 class="display-6 fw-bold">Ready for your next visit?</h2><p class="text-secondary">Send us a message and our team will get back to you soon.</p></div>
+				<div class="col-lg-7">
+					<form id="contactForm" class="bg-white rounded-4 shadow-sm p-4" action="#contact" method="post" novalidate>
+						<div class="row g-3">
+							<div class="col-md-6"><label class="form-label" for="name">Full name</label><input class="form-control" id="name" name="name" type="text" required></div>
+							<div class="col-md-6"><label class="form-label" for="email">Email address</label><input class="form-control" id="email" name="email" type="email" required></div>
+							<div class="col-12"><label class="form-label" for="phone">Phone number</label><input class="form-control" id="phone" name="phone" type="tel" required></div>
+							<div class="col-12"><label class="form-label" for="message">Message</label><textarea class="form-control" id="message" name="message" rows="4" required></textarea></div>
+							<div class="col-12"><button class="btn btn-steel" type="submit">Send message</button></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer text-white text-center py-4"><p class="mb-0">&copy; 2026 Bootstrap5 Bucal</p></footer>
+
+	<script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		const notify = (title, text, icon) => window.Swal ? Swal.fire({ title, text, icon, confirmButtonColor: '#0d6efd' }) : window.alert(title + '\n\n' + text);
+		const themeToggle = document.getElementById('themeToggle');
+		themeToggle.addEventListener('click', () => {
+			const dark = document.documentElement.dataset.theme === 'dark';
+			document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+			themeToggle.setAttribute('aria-pressed', String(!dark));
+		});
+		document.getElementById('contactForm').addEventListener('submit', (event) => {
+			event.preventDefault();
+			const form = event.currentTarget;
+			if (!form.checkValidity()) { form.classList.add('was-validated'); notify('Incomplete form', 'Please complete all required fields.', 'warning'); return; }
+			notify('Message sent', 'Thank you. Our BucalCare team will contact you soon.', 'success');
+			form.reset();
+		});
+		document.addEventListener('contextmenu', (event) => { event.preventDefault(); notify('Protected page', 'Please use the controls provided on this page.', 'info'); });
+		document.addEventListener('keydown', (event) => { if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && ['I', 'J', 'C'].includes(event.key.toUpperCase()))) { event.preventDefault(); notify('Action unavailable', 'That browser action is disabled on this page.', 'info'); } });
+	</script>
+</body>
+</html>
